@@ -18,15 +18,17 @@ http://localhost:8080/swagger-ui.html
 в тоже время приведенные мною ниже - подойдут. (после двоеточия меняем на свое)
 
 Формат json для всех сущностей Equipment (PCEquipment, TVEquipment, ...): операции добавления и обновления
+
 {
     "typeName": "string",
     "manufacturerCountry": "string",
     "firm": "string",
     "hasOnline": true,
     "hasInstallmentPlan": true
-  }
+ }
 
 Формат json для PCModel (id в pcEquipmet должен существовать, чтобы сслыться на него): добавление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -42,6 +44,7 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для RefrigeratorModel (id в refrigeratorEquipmet должен существовать, чтобы сслыться на него): добавление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -57,6 +60,7 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для SmartphoneModel (id в SmartphoneEquipmet должен существовать, чтобы сслыться на него): добавление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -72,6 +76,7 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для VacuumCleanerModel (id в VacuumCleanerEquipmet должен существовать, чтобы сслыться на него): добавление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -87,7 +92,8 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для TVModel (id в TVEquipmet должен существовать, чтобы сслыться на него): добавление
- {
+
+{
     "modelName": "string",
     "serialNumber": 0,
     "color": "string",
@@ -103,6 +109,7 @@ http://localhost:8080/swagger-ui.html
   
   
 Формат json для PCModel (id в pcEquipmet должен существовать, чтобы сслыться на него): обновление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -116,6 +123,7 @@ http://localhost:8080/swagger-ui.html
 
 
 Формат json для RefrigeratorModel (id в refrigeratorEquipmet должен существовать, чтобы сслыться на него): обновление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -128,6 +136,7 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для SmartphoneModel (id в SmartphoneEquipmet должен существовать, чтобы сслыться на него): обновление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -140,6 +149,7 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для VacuumCleanerModel (id в VacuumCleanerEquipmet должен существовать, чтобы сслыться на него): обновление
+
 {
   "modelName": "string",
   "serialNumber": 0,
@@ -152,7 +162,8 @@ http://localhost:8080/swagger-ui.html
 }
 
 Формат json для TVModel (id в TVEquipmet должен существовать, чтобы сслыться на него): обновление
- {
+
+{
     "modelName": "string",
     "serialNumber": 0,
     "color": "string",
