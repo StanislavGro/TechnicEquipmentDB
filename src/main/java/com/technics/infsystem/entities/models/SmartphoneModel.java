@@ -16,7 +16,7 @@ public class SmartphoneModel extends AbstractModel {
     @Column(name = "count_of_camera")
     private int countOfCamera; //количесвто камер
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "smartphone_equipment_id")
     private SmartphoneEquipment smartphoneEquipment;
 

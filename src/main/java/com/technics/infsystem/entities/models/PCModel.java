@@ -16,7 +16,7 @@ public class PCModel extends AbstractModel {
     @Column(name = "processor_type")
     private String processorType; //тип процессора
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "pc_equipment_id")
     private PCEquipment pcEquipment;
 

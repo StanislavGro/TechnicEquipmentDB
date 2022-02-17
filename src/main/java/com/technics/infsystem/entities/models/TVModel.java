@@ -15,7 +15,7 @@ public class TVModel extends AbstractModel {
     @Column(name = "technology")
     private String technology;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "tv_equipment_id")
     private TVEquipment tvEquipment;
 

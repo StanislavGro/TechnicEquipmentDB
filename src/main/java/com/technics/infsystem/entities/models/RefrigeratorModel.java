@@ -16,7 +16,7 @@ public class RefrigeratorModel extends AbstractModel {
     @Column(name = "compressor_type")
     private String compressorType; //тип компрессора
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "refrigerator_equipment_id")
     private RefrigeratorEquipment refrigeratorEquipment;
 

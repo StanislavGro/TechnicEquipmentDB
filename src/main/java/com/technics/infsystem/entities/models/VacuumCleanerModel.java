@@ -1,5 +1,6 @@
 package com.technics.infsystem.entities.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.technics.infsystem.entities.abstraction.AbstractModel;
 import com.technics.infsystem.entities.equipments.SmartphoneEquipment;
 import com.technics.infsystem.entities.equipments.VacuumCleanerEquipment;
@@ -16,7 +17,8 @@ public class VacuumCleanerModel extends AbstractModel {
     @Column(name = "number_of_modes")
     private int numberOfModes; //Количество режимов
 
-    @ManyToOne(fetch = FetchType.LAZY)
+//    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "vacuum_cleaner_equipment_id")
     private VacuumCleanerEquipment vacuumCleanerEquipment;
 
