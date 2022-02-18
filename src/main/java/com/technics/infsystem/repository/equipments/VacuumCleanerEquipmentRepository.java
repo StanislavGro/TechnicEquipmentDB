@@ -1,9 +1,7 @@
 package com.technics.infsystem.repository.equipments;
 
-import com.technics.infsystem.entities.equipments.TVEquipment;
 import com.technics.infsystem.entities.equipments.VacuumCleanerEquipment;
 import com.technics.infsystem.repository.common.CommonEquipmentRepository;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;

@@ -2,7 +2,6 @@ package com.technics.infsystem.service.models;
 
 import com.technics.infsystem.entities.equipments.PCEquipment;
 import com.technics.infsystem.entities.models.PCModel;
-import com.technics.infsystem.entities.models.RefrigeratorModel;
 import com.technics.infsystem.repository.equipments.PCEquipmentRepository;
 import com.technics.infsystem.repository.models.PCModelRepository;
 import com.technics.infsystem.service.abstraction.AbstractModelService;
@@ -67,5 +66,15 @@ public class PCModelService extends AbstractModelService<PCModel, PCModelReposit
     @Override
     public List<PCModel> findByPrice(int from, int to) {
         return repository.findByPrice(from, to);
+    }
+
+    @Override
+    public List<PCModel> incrSortByPriceAndColor() {
+        return repository.incrSortByPriceAndColor();
+    }
+
+    @Override
+    public List<PCModel> decrSortByPriceAndColor() {
+        return repository.decrSortByPriceAndColor();
     }
 }

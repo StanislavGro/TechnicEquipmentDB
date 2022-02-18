@@ -1,7 +1,6 @@
 package com.technics.infsystem.entities.equipments;
 
 import com.technics.infsystem.entities.abstraction.AbstractEquipment;
-import com.technics.infsystem.entities.models.PCModel;
 import com.technics.infsystem.entities.models.RefrigeratorModel;
 
 import javax.persistence.CascadeType;
@@ -18,7 +17,8 @@ public class RefrigeratorEquipment extends AbstractEquipment {
     @OneToMany(mappedBy = "refrigeratorEquipment", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RefrigeratorModel> refrigeratorModelList = new ArrayList<>();
 
-    public RefrigeratorEquipment(){}
+    public RefrigeratorEquipment() {
+    }
 
     public RefrigeratorEquipment(String typeName, String manufacturerCountry, String firm, boolean hasOnline, boolean hasInstallmentPlan, List<RefrigeratorModel> refrigeratorModelList) {
         super(typeName, manufacturerCountry, firm, hasOnline, hasInstallmentPlan);

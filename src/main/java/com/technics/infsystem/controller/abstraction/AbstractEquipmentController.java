@@ -3,7 +3,6 @@ package com.technics.infsystem.controller.abstraction;
 import com.technics.infsystem.controller.interfaces.CommonEquipmentController;
 import com.technics.infsystem.entities.abstraction.AbstractEquipment;
 import com.technics.infsystem.service.interfaces.CommonEquipmentService;
-import io.swagger.annotations.ApiOperation;
 
 import java.util.List;
 import java.util.Optional;

@@ -8,11 +8,11 @@ import java.util.Optional;
 
 public interface CommonEquipmentController<E extends AbstractEquipment> {
 
-    @PostMapping
+    @PostMapping("/creatingEquipment")
     void createEquipment(@RequestBody E equipment);
 
 
-    @GetMapping("all")
+    @GetMapping("/getAll")
     List<E> getAllEquipments();
 
 

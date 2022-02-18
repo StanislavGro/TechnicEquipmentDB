@@ -1,7 +1,6 @@
 package com.technics.infsystem.service.interfaces;
 
 import com.technics.infsystem.entities.abstraction.AbstractEquipment;
-import com.technics.infsystem.entities.abstraction.AbstractModel;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,11 +1,8 @@
 package com.technics.infsystem.service.models;
 
 import com.technics.infsystem.entities.equipments.RefrigeratorEquipment;
-import com.technics.infsystem.entities.equipments.SmartphoneEquipment;
 import com.technics.infsystem.entities.models.RefrigeratorModel;
-import com.technics.infsystem.entities.models.SmartphoneModel;
 import com.technics.infsystem.repository.equipments.RefrigeratorEquipmentRepository;
-import com.technics.infsystem.repository.equipments.SmartphoneEquipmentRepository;
 import com.technics.infsystem.repository.models.RefrigeratorModelRepository;
 import com.technics.infsystem.service.abstraction.AbstractModelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,5 +66,15 @@ public class RefrigeratorModelService extends AbstractModelService<RefrigeratorM
     @Override
     public List<RefrigeratorModel> findByPrice(int from, int to) {
         return repository.findByPrice(from, to);
+    }
+
+    @Override
+    public List<RefrigeratorModel> incrSortByPriceAndColor() {
+        return repository.incrSortByPriceAndColor();
+    }
+
+    @Override
+    public List<RefrigeratorModel> decrSortByPriceAndColor() {
+        return repository.decrSortByPriceAndColor();
     }
 }

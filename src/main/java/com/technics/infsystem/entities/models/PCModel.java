@@ -2,7 +2,6 @@ package com.technics.infsystem.entities.models;
 
 import com.technics.infsystem.entities.abstraction.AbstractModel;
 import com.technics.infsystem.entities.equipments.PCEquipment;
-import com.technics.infsystem.entities.equipments.TVEquipment;
 
 import javax.persistence.*;
 

@@ -1,6 +1,5 @@
 package com.technics.infsystem.repository.models;
 
-import com.technics.infsystem.entities.models.PCModel;
 import com.technics.infsystem.entities.models.RefrigeratorModel;
 import com.technics.infsystem.repository.common.CommonModelRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -19,4 +18,10 @@ public interface RefrigeratorModelRepository extends CommonModelRepository<Refri
 
     @Query("select rm from RefrigeratorModel rm where rm.price >= :from and rm.price<=:to")
     List<RefrigeratorModel> findByPrice(@Param("from") int from, @Param("to") int to);
+
+    @Query("select rm from RefrigeratorModel rm order by rm.price, rm.color")
+    List<RefrigeratorModel> incrSortByPriceAndColor();
+
+    @Query("select rm from RefrigeratorModel rm order by rm.price, rm.color desc")
+    List<RefrigeratorModel> decrSortByPriceAndColor();
 }

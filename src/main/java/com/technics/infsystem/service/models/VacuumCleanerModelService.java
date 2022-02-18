@@ -1,7 +1,6 @@
 package com.technics.infsystem.service.models;
 
 import com.technics.infsystem.entities.equipments.VacuumCleanerEquipment;
-import com.technics.infsystem.entities.models.TVModel;
 import com.technics.infsystem.entities.models.VacuumCleanerModel;
 import com.technics.infsystem.repository.equipments.VacuumCleanerEquipmentRepository;
 import com.technics.infsystem.repository.models.VacuumCleanerModelRepository;
@@ -67,5 +66,15 @@ public class VacuumCleanerModelService extends AbstractModelService<VacuumCleane
     @Override
     public List<VacuumCleanerModel> findByPrice(int from, int to) {
         return repository.findByPrice(from, to);
+    }
+
+    @Override
+    public List<VacuumCleanerModel> incrSortByPriceAndColor() {
+        return repository.incrSortByPriceAndColor();
+    }
+
+    @Override
+    public List<VacuumCleanerModel> decrSortByPriceAndColor() {
+        return repository.decrSortByPriceAndColor();
     }
 }

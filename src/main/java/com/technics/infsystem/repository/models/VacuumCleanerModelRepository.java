@@ -1,7 +1,5 @@
 package com.technics.infsystem.repository.models;
 
-import com.technics.infsystem.entities.models.PCModel;
-import com.technics.infsystem.entities.models.TVModel;
 import com.technics.infsystem.entities.models.VacuumCleanerModel;
 import com.technics.infsystem.repository.common.CommonModelRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -20,4 +18,10 @@ public interface VacuumCleanerModelRepository extends CommonModelRepository<Vacu
 
     @Query("select vcm from VacuumCleanerModel vcm where vcm.price >= :from and vcm.price<=:to")
     List<VacuumCleanerModel> findByPrice(@Param("from") int from, @Param("to") int to);
+
+    @Query("select vcm from VacuumCleanerModel vcm order by vcm.price, vcm.color")
+    List<VacuumCleanerModel> incrSortByPriceAndColor();
+
+    @Query("select vcm from VacuumCleanerModel vcm order by vcm.price, vcm.color desc")
+    List<VacuumCleanerModel> decrSortByPriceAndColor();
 }

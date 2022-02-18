@@ -1,7 +1,6 @@
 package com.technics.infsystem.service.abstraction;
 
 import com.technics.infsystem.entities.abstraction.AbstractEquipment;
-import com.technics.infsystem.entities.equipments.TVEquipment;
 import com.technics.infsystem.repository.common.CommonEquipmentRepository;
 import com.technics.infsystem.service.interfaces.CommonEquipmentService;
 

@@ -20,4 +20,11 @@ public interface TVModelRepository extends CommonModelRepository<TVModel> {
 
     @Query("select tm from TVModel tm where tm.price >= :from and tm.price<=:to")
     List<TVModel> findByPrice(@Param("from") int from, @Param("to") int to);
+
+    @Query("select tm from TVModel tm order by tm.price, tm.color")
+    List<TVModel> incrSortByPriceAndColor();
+
+    @Query("select tm from TVModel tm order by tm.price, tm.color desc")
+    List<TVModel> decrSortByPriceAndColor();
+
 }

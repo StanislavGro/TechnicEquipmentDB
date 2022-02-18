@@ -23,5 +23,8 @@ public interface CommonModelService<M extends AbstractModel> {
 
     List<M> findByPrice(int from, int to);
 
+    List<M> incrSortByPriceAndColor();
+
+    List<M> decrSortByPriceAndColor();
 
 }

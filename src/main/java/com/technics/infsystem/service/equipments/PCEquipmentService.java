@@ -6,7 +6,6 @@ import com.technics.infsystem.service.abstraction.AbstractEquipmentService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PCEquipmentService extends AbstractEquipmentService<PCEquipment, PCEquipmentRepository> {

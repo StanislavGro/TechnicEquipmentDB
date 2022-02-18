@@ -7,3 +7,4 @@ import org.springframework.data.repository.NoRepositoryBean;
 @NoRepositoryBean
 public interface CommonModelRepository<M extends AbstractModel> extends JpaRepository<M, Long> {
 }
+

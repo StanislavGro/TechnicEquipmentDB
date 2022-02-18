@@ -5,12 +5,10 @@ import com.technics.infsystem.entities.models.TVModel;
 import com.technics.infsystem.repository.equipments.TVEquipmentRepository;
 import com.technics.infsystem.repository.models.TVModelRepository;
 import com.technics.infsystem.service.abstraction.AbstractModelService;
-import com.technics.infsystem.service.equipments.TVEquipmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TVModelService extends AbstractModelService<TVModel, TVModelRepository> {
@@ -69,6 +67,16 @@ public class TVModelService extends AbstractModelService<TVModel, TVModelReposit
     @Override
     public List<TVModel> findByPrice(int from, int to) {
         return repository.findByPrice(from, to);
+    }
+
+    @Override
+    public List<TVModel> incrSortByPriceAndColor() {
+        return repository.incrSortByPriceAndColor();
+    }
+
+    @Override
+    public List<TVModel> decrSortByPriceAndColor() {
+        return repository.decrSortByPriceAndColor();
     }
 
 }

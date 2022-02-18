@@ -1,7 +1,5 @@
 package com.technics.infsystem.repository.models;
 
-import com.technics.infsystem.entities.models.PCModel;
-import com.technics.infsystem.entities.models.RefrigeratorModel;
 import com.technics.infsystem.entities.models.SmartphoneModel;
 import com.technics.infsystem.repository.common.CommonModelRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -20,4 +18,10 @@ public interface SmartphoneModelRepository extends CommonModelRepository<Smartph
 
     @Query("select sm from SmartphoneModel sm where sm.price >= :from and sm.price<=:to")
     List<SmartphoneModel> findByPrice(@Param("from") int from, @Param("to") int to);
+
+    @Query("select sm from SmartphoneModel sm order by sm.price, sm.color")
+    List<SmartphoneModel> incrSortByPriceAndColor();
+
+    @Query("select sm from SmartphoneModel sm order by sm.price, sm.color desc")
+    List<SmartphoneModel> decrSortByPriceAndColor();
 }

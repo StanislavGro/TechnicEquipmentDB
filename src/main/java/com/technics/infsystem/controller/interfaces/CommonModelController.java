@@ -8,16 +8,16 @@ import java.util.Optional;
 
 public interface CommonModelController<M extends AbstractModel> {
 
-    @PostMapping
+    @PostMapping("/creatingModel")
     void createModel(@RequestBody M model);
 
 
-    @GetMapping("all")
+    @GetMapping("/getAll")
     List<M> getAllModels();
 
 
-    @GetMapping
-    Optional<M> getModelById(Long id);
+    @GetMapping("/{id}")
+    Optional<M> getModelById(@PathVariable Long id);
 
 
     @PutMapping("/{id}")
@@ -35,5 +35,11 @@ public interface CommonModelController<M extends AbstractModel> {
 
     @GetMapping("/priceFinding/{priceFrom}/{priceTo}")
     List<M> findByPrice(@PathVariable int priceFrom, @PathVariable int priceTo);
+
+    @GetMapping("/increaseSortingByPriceAndColor")
+    List<M> incrSortByPriceAndColor();
+
+    @GetMapping("/decreaseSortingByPriceAndColor")
+    List<M> decrSortByPriceAndColor();
 
 }

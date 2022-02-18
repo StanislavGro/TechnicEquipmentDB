@@ -3,7 +3,6 @@ package com.technics.infsystem.controller.abstraction;
 import com.technics.infsystem.controller.interfaces.CommonModelController;
 import com.technics.infsystem.entities.abstraction.AbstractModel;
 import com.technics.infsystem.service.interfaces.CommonModelService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
@@ -56,5 +55,15 @@ public abstract class AbstractModelController<M extends AbstractModel, S extends
     @Override
     public List<M> findByPrice(int priceFrom, int priceTo) {
         return modelService.findByPrice(priceFrom, priceTo);
+    }
+
+    @Override
+    public List<M> incrSortByPriceAndColor() {
+        return modelService.incrSortByPriceAndColor();
+    }
+
+    @Override
+    public List<M> decrSortByPriceAndColor() {
+        return modelService.decrSortByPriceAndColor();
     }
 }

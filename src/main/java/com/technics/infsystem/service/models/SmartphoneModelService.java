@@ -67,4 +67,14 @@ public class SmartphoneModelService extends AbstractModelService<SmartphoneModel
     public List<SmartphoneModel> findByPrice(int from, int to) {
         return repository.findByPrice(from, to);
     }
+
+    @Override
+    public List<SmartphoneModel> incrSortByPriceAndColor() {
+        return repository.incrSortByPriceAndColor();
+    }
+
+    @Override
+    public List<SmartphoneModel> decrSortByPriceAndColor() {
+        return repository.decrSortByPriceAndColor();
+    }
 }
