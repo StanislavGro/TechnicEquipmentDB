@@ -3,6 +3,7 @@ package com.technics.infsystem.controller.abstraction;
 import com.technics.infsystem.controller.interfaces.CommonEquipmentController;
 import com.technics.infsystem.entities.abstraction.AbstractEquipment;
 import com.technics.infsystem.service.interfaces.CommonEquipmentService;
+import io.swagger.annotations.ApiOperation;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,5 +40,10 @@ public abstract class AbstractEquipmentController<E extends AbstractEquipment, S
     @Override
     public void updateEquipment(Long id, E equipment) {
         equipmentService.updateEquipment(id, equipment);
+    }
+
+    @Override
+    public List<E> findByTypeName(String typeName) {
+        return equipmentService.findByTypeName(typeName);
     }
 }

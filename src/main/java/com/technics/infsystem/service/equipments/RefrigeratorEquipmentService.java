@@ -5,6 +5,9 @@ import com.technics.infsystem.repository.equipments.RefrigeratorEquipmentReposit
 import com.technics.infsystem.service.abstraction.AbstractEquipmentService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class RefrigeratorEquipmentService extends AbstractEquipmentService<RefrigeratorEquipment, RefrigeratorEquipmentRepository> {
 
@@ -17,4 +20,11 @@ public class RefrigeratorEquipmentService extends AbstractEquipmentService<Refri
     public void createEquipment(RefrigeratorEquipment equipment) {
         repository.save(equipment);
     }
+
+    @Override
+    public List<RefrigeratorEquipment> findByTypeName(String typeName) {
+        return repository.findByTypeName(typeName);
+    }
+
+
 }

@@ -53,4 +53,19 @@ public class PCModelService extends AbstractModelService<PCModel, PCModelReposit
 
         }
     }
+
+    @Override
+    public List<PCModel> findByModelName(String modelName) {
+        return repository.findByModelName(modelName);
+    }
+
+    @Override
+    public List<PCModel> findByColor(String color) {
+        return repository.findByColor(color);
+    }
+
+    @Override
+    public List<PCModel> findByPrice(int from, int to) {
+        return repository.findByPrice(from, to);
+    }
 }

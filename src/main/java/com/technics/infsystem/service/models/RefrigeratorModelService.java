@@ -55,4 +55,19 @@ public class RefrigeratorModelService extends AbstractModelService<RefrigeratorM
 
         }
     }
+
+    @Override
+    public List<RefrigeratorModel> findByModelName(String modelName) {
+        return repository.findByModelName(modelName);
+    }
+
+    @Override
+    public List<RefrigeratorModel> findByColor(String color) {
+        return repository.findByColor(color);
+    }
+
+    @Override
+    public List<RefrigeratorModel> findByPrice(int from, int to) {
+        return repository.findByPrice(from, to);
+    }
 }

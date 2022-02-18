@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class  VacuumCleanerModelService extends AbstractModelService<VacuumCleanerModel, VacuumCleanerModelRepository> {
+public class VacuumCleanerModelService extends AbstractModelService<VacuumCleanerModel, VacuumCleanerModelRepository> {
 
     @Autowired
     private VacuumCleanerEquipmentRepository vacuumCleanerEquipmentRepository;
@@ -52,5 +52,20 @@ public class  VacuumCleanerModelService extends AbstractModelService<VacuumClean
             }
 
         }
+    }
+
+    @Override
+    public List<VacuumCleanerModel> findByModelName(String modelName) {
+        return repository.findByModelName(modelName);
+    }
+
+    @Override
+    public List<VacuumCleanerModel> findByColor(String color) {
+        return repository.findByColor(color);
+    }
+
+    @Override
+    public List<VacuumCleanerModel> findByPrice(int from, int to) {
+        return repository.findByPrice(from, to);
     }
 }

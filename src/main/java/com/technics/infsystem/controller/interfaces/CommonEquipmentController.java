@@ -27,4 +27,7 @@ public interface CommonEquipmentController<E extends AbstractEquipment> {
     @DeleteMapping("/{id}")
     void deleteEquipment(@PathVariable Long id);
 
+    @GetMapping("/{typeName}")
+    List<E> findByTypeName(@PathVariable String typeName);
+
 }

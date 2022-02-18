@@ -43,4 +43,18 @@ public abstract class AbstractModelController<M extends AbstractModel, S extends
         modelService.deleteModel(id);
     }
 
+    @Override
+    public List<M> findByModelName(String modelName) {
+        return modelService.findByModelName(modelName);
+    }
+
+    @Override
+    public List<M> findByColor(String color) {
+        return modelService.findByColor(color);
+    }
+
+    @Override
+    public List<M> findByPrice(int priceFrom, int priceTo) {
+        return modelService.findByPrice(priceFrom, priceTo);
+    }
 }

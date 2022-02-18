@@ -56,4 +56,19 @@ public class TVModelService extends AbstractModelService<TVModel, TVModelReposit
         }
     }
 
+    @Override
+    public List<TVModel> findByModelName(String modelName) {
+        return repository.findByModelName(modelName);
+    }
+
+    @Override
+    public List<TVModel> findByColor(String color) {
+        return repository.findByColor(color);
+    }
+
+    @Override
+    public List<TVModel> findByPrice(int from, int to) {
+        return repository.findByPrice(from, to);
+    }
+
 }

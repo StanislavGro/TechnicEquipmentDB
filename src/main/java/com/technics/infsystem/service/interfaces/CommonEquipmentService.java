@@ -18,4 +18,6 @@ public interface CommonEquipmentService<E extends AbstractEquipment> {
 
     void updateEquipment(Long id, E equipment);
 
+    List<E> findByTypeName(String typeName);
+
 }

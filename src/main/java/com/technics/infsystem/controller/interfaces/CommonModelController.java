@@ -27,4 +27,13 @@ public interface CommonModelController<M extends AbstractModel> {
     @DeleteMapping("/{id}")
     void deleteModel(@PathVariable Long id);
 
+    @GetMapping("/modelNameFinding/{modelName}")
+    List<M> findByModelName(@PathVariable String modelName);
+
+    @GetMapping("/colorFinding/{color}")
+    List<M> findByColor(@PathVariable String color);
+
+    @GetMapping("/priceFinding/{priceFrom}/{priceTo}")
+    List<M> findByPrice(@PathVariable int priceFrom, @PathVariable int priceTo);
+
 }

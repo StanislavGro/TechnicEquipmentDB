@@ -5,6 +5,9 @@ import com.technics.infsystem.repository.equipments.VacuumCleanerEquipmentReposi
 import com.technics.infsystem.service.abstraction.AbstractEquipmentService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class VacuumCleanerEquipmentService extends AbstractEquipmentService<VacuumCleanerEquipment, VacuumCleanerEquipmentRepository> {
 
@@ -15,6 +18,11 @@ public class VacuumCleanerEquipmentService extends AbstractEquipmentService<Vacu
     @Override
     public void createEquipment(VacuumCleanerEquipment equipment) {
         repository.save(equipment);
+    }
+
+    @Override
+    public List<VacuumCleanerEquipment> findByTypeName(String typeName) {
+        return repository.findByTypeName(typeName);
     }
 
 }

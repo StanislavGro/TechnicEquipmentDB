@@ -5,6 +5,9 @@ import com.technics.infsystem.repository.equipments.SmartphoneEquipmentRepositor
 import com.technics.infsystem.service.abstraction.AbstractEquipmentService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class SmartphoneEquipmentService extends AbstractEquipmentService<SmartphoneEquipment, SmartphoneEquipmentRepository> {
     public SmartphoneEquipmentService(SmartphoneEquipmentRepository repository) {
@@ -15,4 +18,11 @@ public class SmartphoneEquipmentService extends AbstractEquipmentService<Smartph
     public void createEquipment(SmartphoneEquipment equipment) {
         repository.save(equipment);
     }
+
+    @Override
+    public List<SmartphoneEquipment> findByTypeName(String typeName) {
+        return repository.findByTypeName(typeName);
+    }
+
+
 }

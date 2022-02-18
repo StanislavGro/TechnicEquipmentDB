@@ -17,4 +17,11 @@ public interface CommonModelService<M extends AbstractModel> {
 
     void deleteModel(Long id);
 
+    List<M> findByModelName(String modelName);
+
+    List<M> findByColor(String color);
+
+    List<M> findByPrice(int from, int to);
+
+
 }

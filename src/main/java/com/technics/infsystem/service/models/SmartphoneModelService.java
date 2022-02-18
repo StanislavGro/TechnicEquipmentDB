@@ -52,4 +52,19 @@ public class SmartphoneModelService extends AbstractModelService<SmartphoneModel
 
         }
     }
+
+    @Override
+    public List<SmartphoneModel> findByModelName(String modelName) {
+        return repository.findByModelName(modelName);
+    }
+
+    @Override
+    public List<SmartphoneModel> findByColor(String color) {
+        return repository.findByColor(color);
+    }
+
+    @Override
+    public List<SmartphoneModel> findByPrice(int from, int to) {
+        return repository.findByPrice(from, to);
+    }
 }
